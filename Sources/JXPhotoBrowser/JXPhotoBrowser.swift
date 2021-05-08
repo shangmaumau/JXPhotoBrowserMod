@@ -105,6 +105,9 @@ open class JXPhotoBrowser: UIViewController, UIViewControllerTransitioningDelega
     
     open weak var previousNavigationControllerDelegate: UINavigationControllerDelegate?
     
+    /// 图片或视频下滑 dismiss 的配置
+    open var panDismiss: Bool = true
+    
     public init() {
         super.init(nibName: nil, bundle: nil)
     }

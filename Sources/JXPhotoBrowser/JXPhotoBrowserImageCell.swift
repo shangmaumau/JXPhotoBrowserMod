@@ -250,7 +250,7 @@ open class JXPhotoBrowserImageCell: UIView, UIScrollViewDelegate, UIGestureRecog
         case .ended, .cancelled:
             imageView.frame = panResult(pan).frame
             let isDown = pan.velocity(in: self).y > 0
-            if isDown {
+            if isDown && photoBrowser?.panDismiss == true {
                 photoBrowser?.dismiss()
             } else {
                 photoBrowser?.maskView.alpha = 1.0
